@@ -31,10 +31,10 @@ class MyModel(nn.Module):
     def forward(self, captions, lengths):
         """Decode image feature vectors and generates captions."""
         embeddings = self.embed(captions)
-        print(embeddings.size())
+        #print(embeddings.size())
         embeddings = embeddings.view(embeddings.size()[0],-1)
         #embeddings = embeddings.view(1,-1)
-        print(embeddings.size())
+        #print(embeddings.size())
         outputs = F.relu(self.linear(embeddings))
         outputs = outputs.view(outputs.size(0),3,40,40)
         return outputs
