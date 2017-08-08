@@ -1,0 +1,2 @@
+fill(gray_color)
+rect(x_three_seven,y_nine,5,5)

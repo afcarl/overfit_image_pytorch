@@ -1,3 +1,0 @@
-Variable containing:
- 572.0780
-[torch.cuda.FloatTensor of size 1 (GPU 0)]

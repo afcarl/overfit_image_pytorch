@@ -1,0 +1,2 @@
+fill(bright_white_color)
+ellipse(x_eight,y_five,5,5)

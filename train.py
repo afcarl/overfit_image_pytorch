@@ -97,7 +97,7 @@ if __name__ == '__main__':
     parser.add_argument('--model_path', type=str, default='./models/' , help='path for saving trained models')
     parser.add_argument('--crop_size', type=int, default=40 , help='size for randomly cropping images')
     parser.add_argument('--vocab_path', type=str, help='path for vocabulary wrapper')
-    parser.add_argument('--image_dir', type=str, default='./training_data/', help='directory for images')
+    parser.add_argument('--image_dir', type=str, default='./training_data/one', help='directory for images')
     parser.add_argument('--log_step', type=int , default=10, help='step size for prining log info')
     parser.add_argument('--save_step', type=int , default=1000, help='step size for saving trained models')
     # Model parameters

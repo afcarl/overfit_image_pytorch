@@ -8,8 +8,6 @@ from torchvision import transforms
 import torch.nn as nn 
 import torch.nn.functional as F
 
-   
-
 class MyModel(nn.Module):
     def __init__(self, embed_size, hidden_size, vocab_size, vocab):
         """Set the hyper-parameters and build the layers."""
@@ -31,11 +29,13 @@ class MyModel(nn.Module):
     def forward(self, captions, lengths):
         """Decode image feature vectors and generates captions."""
         embeddings = self.embed(captions)
+
         #print(embeddings.size())
         embeddings = embeddings.view(embeddings.size()[0],-1)
         #embeddings = embeddings.view(1,-1)
         #print(embeddings.size())
-        outputs = F.relu(self.linear(embeddings))
+        outputs = self.linear(embeddings)
+        #outputs = F.relu(self.linear(embeddings))
         outputs = outputs.view(outputs.size(0),3,40,40)
         return outputs
     
